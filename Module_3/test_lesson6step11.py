@@ -10,7 +10,7 @@ def first(link1):
     browser.get(link1)
 
     # Ваш код, который заполняет обязательные поля
-    First_name = browser.find_element_by_css_selector("[placeholder = 'Input your first name']")
+    First_name = browser.find_element_by_css_selector("input.first")
     First_name.send_keys("ivan")
 
     Second_name = browser.find_element_by_css_selector("[placeholder = 'Input your last name']")
@@ -31,16 +31,15 @@ def first(link1):
     welcome_text_elt = browser.find_element_by_tag_name("h1")
     # записываем в переменную welcome_text текст из элемента welcome_text_elt2
     welcome_text = welcome_text_elt.text
+    return welcome_text
 
 class TestFirst(unittest.TestCase):
     def test_first(self):
         first_link = first(link1)
-        return first_link
         self.assertEqual(first_link, "Congratulations! You have successfully registered!", "something went wrong")
 
     def test_second(self):
         second_link = first(link2)
-        return second_link
         self.assertEqual(second_link, "Congratulations! You have successfully registered!", 'something went wrong')
 
 if __name__ == "__main__":
