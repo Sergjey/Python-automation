@@ -25,12 +25,12 @@ try:
     time.sleep(1)
 
     # находим элемент, содержащий текст
-    welcome_text_elt = browser.find_element_by_tag_name("h1")
+    welcome_text_elt = browser.find_element_by_tag_name("h1").text
     # записываем в переменную welcome_text текст из элемента welcome_text_elt
-    welcome_text = welcome_text_elt.text
+    #welcome_text = welcome_text_elt.text
 
     # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
-    assert "Congratulations! You have successfully registered!" == welcome_text
+    assert "Congratulations! You have successfully registered!" == welcome_text_elt
 
 finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
