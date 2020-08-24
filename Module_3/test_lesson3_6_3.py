@@ -52,7 +52,7 @@ class TestAnsw():
         assert message.text
 
         message2 = browser.find_element_by_css_selector("[class='smart-hints__hint']")
-        assert "Correct!" in message2.text
+        assert "Correct!" in message2.text, 'message is not "Correct!"'
 
         #pytest -s -v test_lesson3_6_3.py
         # pytest -s test_lesson3_6_3.py
