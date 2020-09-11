@@ -1,4 +1,4 @@
 # Python-automation using PyTest and POM
-Knowledge refresh
+Knowledge update
 
 Just for first commit
